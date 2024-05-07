@@ -1,4 +1,7 @@
+import { ProductButtons } from "../components/ProductButtons";
 import ProductCard from "../components/ProductCard";
+import { ProductImage } from "../components/ProductImage";
+import { ProductTitle } from "../components/ProductTitle";
 import { Product } from "../interfaces/Product";
 
 const product: Product = {
@@ -19,7 +22,11 @@ export default function ShoppingPage() {
           flexDirection: "row",
         }}
       >
-        <ProductCard product={product}></ProductCard>
+        <ProductCard product={product}>
+          <ProductImage />
+          <ProductTitle />
+          <ProductButtons />
+        </ProductCard>
       </div>
     </div>
   );
